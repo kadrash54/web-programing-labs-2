@@ -3,10 +3,11 @@ app = Flask(__name__)
 
 @app.route("/lab2/example")
 def example():
-    name = 'Кирилл Кадралеев'
+    name = ''#Кирилл Кадралеев
     srok = '3 ходка'
     number = 'часть 2'
     group = 'ФБИ-11'
+    title_name = 'Кадрашевский 54'
     return render_template('example.html', name=name, srok=srok, number=number, group=group)
 
 @app.route("/")
