@@ -8,7 +8,26 @@ def example():
     number = 'часть 2'
     group = 'ФБИ-11'
     title_name = 'Кадрашевский 54'
-    return render_template('example.html', name=name, srok=srok, number=number, group=group)
+    fruits = [
+    {'name': 'яблоки', 'price':100},
+    {'name': 'груша', 'price': 120},
+    {'name': 'апельсин', 'price':80},
+    {'name': 'мандаринф', 'price': 95},
+    {'name': 'манго', 'price':321},
+    ]
+     books = [
+        {'name': 'Warlock of the Magus World', 'author': 'Wen Chao Gong', 'pages': 610, 'genre': 'Попаданцы'},
+        {'name': 'Реинкарнация безработного', 'author': 'Рифудзин-на Магонотэ', 'pages': 5000, 'genre': 'Попаданцы'},
+        {'name': 'Грозовой перевал', 'author': 'Эмили Бронте', 'pages': 416, 'genre': 'роман'},
+        {'name': 'Сто лет одиночества', 'author': 'Габриэль Гарсия Маркес', 'pages': 416, 'genre': 'роман'},
+        {'name': 'Великий Гэтсби', 'author': 'Фрэнсис Скотт Фицджеральд', 'pages': 448, 'genre': 'роман'},
+        {'name': 'Приключения Шерлока Холмса', 'author': 'Артур Конан Дойл', 'pages': 704, 'genre': 'детектив'},
+        {'name': 'Мастер и Маргарита', 'author': 'Михаил Булгаков', 'pages': '420-480 в зависимости от издания', 'genre': 'роман'},
+        {'name': 'Атлант расправил плечи', 'author': 'Айн Рэнд', 'pages': 1398, 'genre': 'роман'},
+        {'name': 'Три товарища', 'author': 'Эрих Мария Ремарк', 'pages': 484, 'genre': 'роман'},
+        {'name': 'Робинзон Крузо', 'author': 'Даниель Дефо', 'pages': 230, 'genre': 'роман'}
+    ]
+    return render_template('example.html', name=name, srok=srok, number=number, group=group,fruits=fruits)
 
 @app.route("/")
 @app.route("/index")
@@ -30,7 +49,7 @@ def user_inf():
     </header>
     <main>
     <img src="''' + url_for('static', filename='NSTU_logo.png') + '''">
-    <a href="http://127.0.0.1:5000/lab1" target="_blank">lab1</a>
+    <a href="/lab1/student" target="_blank">lab1</a>
     </main>
     <footer>
     Кадралеев Кирилл , ФБИ-11, 3 курс, 2023
