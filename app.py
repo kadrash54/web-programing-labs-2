@@ -9,13 +9,13 @@ def example():
     group = 'ФБИ-11'
     title_name = 'Кадрашевский 54'
     fruits = [
-    {'name': 'яблоки', 'price':100},
-    {'name': 'груша', 'price': 120},
-    {'name': 'апельсин', 'price':80},
-    {'name': 'мандаринф', 'price': 95},
-    {'name': 'манго', 'price':321},
+        {'name': 'яблоки', 'price':100},
+        {'name': 'груша', 'price': 120},
+        {'name': 'апельсин', 'price':80},
+        {'name': 'мандаринф', 'price': 95},
+        {'name': 'манго', 'price':321}
     ]
-     books = [
+    books = [
         {'name': 'Warlock of the Magus World', 'author': 'Wen Chao Gong', 'pages': 610, 'genre': 'Попаданцы'},
         {'name': 'Реинкарнация безработного', 'author': 'Рифудзин-на Магонотэ', 'pages': 5000, 'genre': 'Попаданцы'},
         {'name': 'Грозовой перевал', 'author': 'Эмили Бронте', 'pages': 416, 'genre': 'роман'},
@@ -27,8 +27,11 @@ def example():
         {'name': 'Три товарища', 'author': 'Эрих Мария Ремарк', 'pages': 484, 'genre': 'роман'},
         {'name': 'Робинзон Крузо', 'author': 'Даниель Дефо', 'pages': 230, 'genre': 'роман'}
     ]
-    return render_template('example.html', name=name, srok=srok, number=number, group=group,fruits=fruits)
+    return render_template('example.html', name=name, srok=srok, number=number, group=group,fruits=fruits,books=books)
 
+    @app.route('/lab2/')
+    def lab2():
+        return render_template('lab2.html')
 @app.route("/")
 @app.route("/index")
 def start():
