@@ -1,7 +1,7 @@
-from flask import Flask, redirect, url_for, render_template
-app = Flask(__name__)
+from flask import Blueprint, render_template
+lab2 = Blueprint('lab2', __name__)
 
-@app.route("/lab2/example")
+@lab2.route("/lab2/example")
 def example():
     name = ''#Кирилл Кадралеев
     srok = '3 ходка'
@@ -29,9 +29,11 @@ def example():
     ]
     return render_template('example.html', name=name, srok=srok, number=number, group=group,fruits=fruits,books=books)
 
-    @app.route('/lab2/')
-    def lab2():
-        return render_template('lab2.html')
-    @app.route('/lab2/anime')
-    def anime():
-        return render_template('anime.html')
+@lab2.route('/lab2/')
+def lab():
+    return render_template('lab2.html')
+
+
+@lab2.route('/lab2/anime')
+def anime_char():
+    return render_template('anime.html')
