@@ -13,7 +13,7 @@ x = int(x)
 i = int(n)
 for i in range(i, 0, -1):
 result += (-1) ** i * x ** (2 * i + 1) / math.factorial((2 * i + 1))
-return render_template('armor.html', x=x, n=n, result=result)
+return render_template('shield2.html', x=x, n=n, result=result)
 
 
 #if 19
@@ -32,5 +32,5 @@ if n3:
 n3 = float(n3)
 if n4:
 n4 = float(n4)
-return render_template('armor2.html', n1=n1, n2=n2, n3=n3, n4=n4)
+return render_template('shield.html', n1=n1, n2=n2, n3=n3, n4=n4)
 {% extends "base.html" %}
