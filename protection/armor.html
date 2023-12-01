@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 3{% endblock %}
+
+{% block main %}
+
+{% if n1 != n2 and n2 == n3 and n3 == n4 %}
+<br>
+<div>Номер иного числа: 1</div>
+<br>
+<br>
+{% elif n2 != n1 and n1 == n3 and n3 == n4 %}
+<br>
+<br>
+<div>Номер иного числа: 2</div>
+<br>
+<br>
+{% elif n3 != n1 and n1 == n2 and n2 == n4 %}
+<br>
+<br>
+<div>Номер иного числа: 3</div>
+<br>
+<br>
+{% elif n4 != n1 and n1 == n2 and n2 == n3 %}
+<br>
+<br>
+<div>Номер иного числа: 4</div>
+<br>
+<br>
+<br>
+{% else %}
+<br>
+<label>Введите числа</label>

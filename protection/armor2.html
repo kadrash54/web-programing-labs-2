@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 3{% endblock %}
+
+{% block main %}
+{% if x and n %}
+<br>
+<br>
+<div>Равно: {{ result }}</div>
+<br>
+<br>
+{% else %}
+<br>
+<label>Введите числа</label>
+<form>
+<br>
+<br>
+<label>Число X</label>
+<div>
+<input type="number" name="x" value="{{ x or '' }}">
+</div>
+<br>
+<br>
+
+<label>Число N</label>
+<div>
+<input type="number" name="n" value="{{ n or '' }}">
+</div>
+<br>
+<br>
+<button type="submit">Отправить</button>
+<br>
+<br>
+</form>
+{% endif %}
+{% endblock %}
