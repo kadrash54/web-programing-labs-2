@@ -64,3 +64,9 @@ def pay(params):
 
     price = calculate_price(params)
     return {"result": f'С карты {card_num} списано {price} руб', "error": None}
+
+
+def refund(params):
+    card_num = params['card_num']
+    price = calculate_price(params)
+    return {"result": f'На карту {card_num} возвращено {price} руб'}
